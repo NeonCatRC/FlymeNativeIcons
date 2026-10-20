@@ -1,0 +1,11 @@
+# local paths and build output
+build.local.json
+build/
+__pycache__/
+# never commit: signing keys and Meizu binaries (personal use only)
+keys/
+*.jks
+*.pass
+*.keystore
+*.apk
+*.dex

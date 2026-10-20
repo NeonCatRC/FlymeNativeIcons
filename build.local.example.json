@@ -1,0 +1,11 @@
+{
+  "build_tools": "C:/Android/sdk/build-tools/36.0.0",
+  "android_jar": "C:/Android/sdk/platforms/android-36/android.jar",
+  "apktool": "C:/tools/apktool/apktool.jar",
+  "keys": "keys",
+  "base_apk": "build/FlymeCalculator.apk",
+  "work": "build",
+  "adb": "adb",
+  "device": "192.168.0.10:5555",
+  "key_dname": "CN=Your Name"
+}

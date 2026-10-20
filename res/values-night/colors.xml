@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 NeonCatRC -->
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<resources>
+    <color name="fi_icon_glyph">#ff4d8bff</color>
+    <color name="fi_icon_glyph_soft">#664d8bff</color>
+    <color name="fi_icon_bg_top">#ff333333</color>
+    <color name="fi_icon_bg_bottom">#ff161616</color>
+    <color name="fi_surface_clear">#000b0b0c</color>
+</resources>

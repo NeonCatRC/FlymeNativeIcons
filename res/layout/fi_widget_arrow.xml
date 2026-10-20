@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 NeonCatRC -->
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:gravity="center_vertical" android:orientation="horizontal">
+    <TextView android:id="@+id/fi_value" android:visibility="gone"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fd_sys_margin_mini" android:maxWidth="140dp" android:singleLine="true"
+        android:textColor="?colorOnSurfaceVariant" style="@style/TextAppearance.Flyme.Body.Small"/>
+    <View android:id="@+id/fi_swatch" android:visibility="gone"
+        android:layout_width="20dp" android:layout_height="20dp" android:layout_marginEnd="@dimen/fd_sys_margin_mini"/>
+    <com.meizu.common.widget.ImageFontCompatView android:id="@+id/fi_arrow"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        app:fontTextColor="@color/mz_icon_font_text_color" app:textResName="@string/icon_font_arrow_next"/>
+</LinearLayout>

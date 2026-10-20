@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 NeonCatRC -->
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<resources>
+    <style name="FiTheme" parent="@style/Theme.Flyme.AppCompat.Light.Color.Blue">
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="android:windowBackground">@color/fd_sys_color_surface_default</item>
+        <item name="android:navigationBarColor">@color/fd_sys_color_surface_default</item>
+        <item name="actionBarSize">@dimen/mz_action_bar_default_height_appcompat</item>
+        <item name="mzActionBarExpandedSize">@dimen/mz_action_bar_default_height_appcompat_expanded</item>
+        <item name="mzNestedScrollActionBar">true</item>
+        <item name="mzNestedScrollActionBarTheme">@style/FiNestedScrollActionBar</item>
+        <item name="mzToolbarStyleFullScreen">@style/FiToolbar</item>
+    </style>
+    <style name="FiToolbar" parent="@style/Widget.Flyme.AppCompat.Toolbar">
+        <item name="android:background">@color/fd_sys_color_surface_default</item>
+    </style>
+    <!-- system apps (Notes, File manager, Recorder) keep the title bar in the page colour -->
+    <style name="FiNestedScrollActionBar" parent="@style/ThemeOverlay.Flyme.NestedScrollActionBar">
+        <item name="actionBarStyle">@style/FiNestedScrollActionBar.Bar</item>
+        <item name="mzToolbarStyleFullScreen">@style/FiToolbar</item>
+    </style>
+    <style name="FiNestedScrollActionBar.Bar" parent="@style/Widget.Flyme.AppCompat.Light.ActionBar.White.NestedScroll">
+        <item name="background">@color/fd_sys_color_surface_default</item>
+        <item name="backgroundStacked">@color/fd_sys_color_surface_default</item>
+    </style>
+</resources>

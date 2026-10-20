@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 NeonCatRC -->
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <flyme.support.v7.widget.MzRecyclerView android:id="@+id/fi_list"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:clipToPadding="false" android:paddingBottom="@dimen/fd_sys_margin_heavy"
+        android:scrollbars="none"/>
+    <LinearLayout android:id="@+id/fi_bottom_bar" android:visibility="gone"
+        android:layout_width="match_parent" android:layout_height="@dimen/mz_action_bar_default_height_appcompat_split"
+        android:layout_gravity="bottom" android:gravity="center" android:orientation="horizontal"
+        android:background="@color/fd_sys_color_surface_default"
+        android:paddingStart="44dp" android:paddingEnd="44dp">
+        <com.meizu.common.widget.MzButton android:id="@+id/fi_btn_secondary" android:visibility="gone"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_height="@dimen/mz_bottom_bar_corner_button_height"
+            android:layout_marginEnd="20dp" android:gravity="center"
+            android:fontFamily="sans-serif-medium" android:textAllCaps="false" style="@style/Widget.DeviceDefault.Light.Button.LightColor.Color"/>
+        <com.meizu.common.widget.MzButton android:id="@+id/fi_btn_primary"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_height="@dimen/mz_bottom_bar_corner_button_height"
+            android:gravity="center" android:fontFamily="sans-serif-medium" android:textAllCaps="false"
+            style="@style/Widget.DeviceDefault.Light.Button.Color"/>
+    </LinearLayout>
+</FrameLayout>

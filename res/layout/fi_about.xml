@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 NeonCatRC -->
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:gravity="center_horizontal" android:orientation="vertical"
+    android:paddingLeft="?dialogPreferredPadding" android:paddingRight="?dialogPreferredPadding"
+    android:paddingTop="@dimen/fd_sys_margin_heavy">
+    <ImageView android:id="@+id/fi_about_icon"
+        android:layout_width="72dp" android:layout_height="72dp" android:scaleType="fitCenter"/>
+    <TextView android:id="@+id/fi_about_name"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fd_sys_margin_regular"
+        android:text="@string/fi_app_name" android:textColor="?colorOnSurface"
+        android:textSize="@dimen/fd_sys_typescale_headline_small_size"
+        android:fontFamily="@string/fd_sys_typescale_headline_small_font"/>
+    <TextView android:id="@+id/fi_about_version"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fd_sys_margin_mini"
+        android:textColor="?colorOnSurfaceVariant" style="@style/TextAppearance.Flyme.Body.Mini"/>
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fd_sys_margin_medium"
+        android:gravity="center" android:lineSpacingExtra="4dp"
+        android:text="@string/fi_about_text" android:textColor="?colorOnSurfaceVariant"
+        style="@style/TextAppearance.Flyme.Body.Small"/>
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fd_sys_margin_medium"
+        android:text="@string/fi_about_author" android:textColor="?colorOnSurfaceVariant"
+        style="@style/TextAppearance.Flyme.Body.Mini"/>
+    <!-- colour and underline are set in Ui.about -->
+    <TextView android:id="@+id/fi_about_link"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:paddingTop="@dimen/fd_sys_margin_small"
+        android:text="@string/fi_about_source"
+        style="@style/TextAppearance.Flyme.Body.Mini"/>
+</LinearLayout>

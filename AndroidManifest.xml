@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- SPDX-FileCopyrightText: 2026 NeonCatRC -->
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="{pkg}">
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
+    <permission android:name="{pkg}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="{pkg}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+
+    <application android:name="{pkg}.App"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/fi_ic_launcher"
+        android:label="@string/fi_app_name"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/FiTheme">
+
+        <activity android:name="{pkg}.MainActivity" android:exported="true"
+            android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="{pkg}.AppActivity" android:exported="false"
+            android:screenOrientation="portrait"/>
+        <!-- exported: the icon pack's launcher entry opens it -->
+        <activity android:name="{pkg}.SettingsActivity" android:exported="true"
+            android:label="@string/fi_settings" android:screenOrientation="portrait"/>
+
+        <!-- developer aid for tools/devtool.py: only adb (the shell holds DUMP) can start it -->
+        <activity android:name="{pkg}.DevActivity" android:exported="true"
+            android:permission="android.permission.DUMP"
+            android:excludeFromRecents="true" android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <service android:name="{pkg}.RestoreJob" android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="{pkg}.BootReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Flyme 12 UI library (from the Calculator base) -->
+        <provider android:name="com.meizu.common.app.LibraryInitProvider"
+            android:authorities="{pkg}.meizucommon" android:enabled="true" android:exported="false"/>
+        <provider android:name="androidx.startup.InitializationProvider"
+            android:authorities="{pkg}.androidx-startup" android:exported="false">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:name="flyme.support.v7.app.palette.FlymePalettePopupActivity"
+            android:documentLaunchMode="never" android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Flyme.AppCompat.Light.LitePopup.Color.Blue"/>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+    </application>
+</manifest>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 NeonCatRC -->
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:paddingStart="32dp" android:paddingEnd="32dp"
+    android:paddingTop="16dp" android:paddingBottom="12dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <TextView android:id="@android:id/title" android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" style="@style/Widget.Flyme.Preference.Title"/>
+        <TextView android:id="@+id/fi_value" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="?colorOnSurfaceVariant" style="@style/TextAppearance.Flyme.Body.Small"/>
+    </LinearLayout>
+    <com.meizu.common.widget.MzSeekBar android:id="@+id/fi_seek"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+</LinearLayout>

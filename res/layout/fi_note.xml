@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 NeonCatRC -->
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@android:id/summary"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:paddingStart="32dp" android:paddingEnd="32dp" android:paddingTop="8dp" android:paddingBottom="8dp"
+    android:textColor="?colorOnSurfaceVariant" android:lineSpacingExtra="3dp" style="@style/TextAppearance.Flyme.Body.Mini"/>
